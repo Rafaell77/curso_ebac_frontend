@@ -1,0 +1,177 @@
+
+/* Redefinindo estilos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilizando o container principal */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #f5f5f5;
+}
+
+.logo h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 10px;
+}
+
+.menu ul li {
+  margin-left: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu ul li a:hover {
+  color: #000;
+}
+
+/* Seção Sobre a Loja */
+
+#sobre-loja {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#sobre-loja h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#sobre-loja .imagem {
+  float: left;
+  margin-right: 20px;
+}
+
+#sobre-loja .texto {
+  overflow: hidden;
+}
+
+#sobre-loja .texto p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Seção Produtos */
+
+#produtos {
+  padding: 20px;
+}
+
+#produtos h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lista-produtos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul.lista-produtos {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.lista-produtos li.produto {
+  margin: 10px;
+  width: 25%;
+  text-align: center;
+}
+
+.produto img {
+  width: 100%;
+}
+
+.produto h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.produto p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.produto button {
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.produto button:hover {
+  background-color: #333;
+}
+
+
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .loja-imagem, .produtos-grid {
+    width: 100%;
+  }
+
+  .produtos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+}
+
+
+@media (max-width: 640px) {
+  #produtos .produto {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  #produtos .produto img {
+    width: 100%;
+  }
+
+  ul.lista-produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  #produtos .produto p {
+    font-size: 14px;
+  }
+}
