@@ -1,5 +1,5 @@
 
-@use 'cores';
+@use '../config/cores';
 
 * {
   margin: 0;
@@ -23,7 +23,7 @@ li {
 }
 
 header {
-  background-color: $primary-color;
+  background-color: cores.$primary-color;
   position: sticky;
   top: 0;
   left: 0;
@@ -46,7 +46,7 @@ header .container {
 }
 
 .menu li a {
-  color: $text-color;
+  color: cores.$text-color;
   text-decoration: none;
 }
 
@@ -70,8 +70,8 @@ section {
 
 .product-button {
   display: block;
-  background-color: $secondary-color;
-  color: $text-color;
+  background-color: cores.$secondary-color;
+  color: cores.$text-color;
   text-align: center;
   padding: 8px 0;
   border-radius: 8px;
@@ -80,7 +80,7 @@ section {
 }
 
 .product-button:hover {
-  background-color: lighten($secondary-color, 10%);
+  background-color: lighten(cores.$secondary-color, 10%);
 }
 
 @media screen and (max-width: 1023px) {
