@@ -1,15 +1,14 @@
 
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require ('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
-const imagemin = require(gulp-imagemin);
+const imagemin = require('gulp-imagemin');
 
 function comprimeImagens() {
-    return gulp.src('./source/imagens/*')
+    return gulp.src('./source/images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/imagens'));
+        .pipe(gulp.dest('./build/images'));
 }
 
 function comprimeJavascript() {
@@ -31,6 +30,6 @@ function compilaSass () {
 exports.default = function() {
     gulp.watch('./source/styles/*.scss', {ignoreInitial: false}, gulp.series(compilaSass));
     gulp.watch('./source/scripts/*.js', {ignoreInitial: false}, gulp.series(comprimeJavascript));
-    gulp.watch('./source/imagens/*', {ignoreInitial: false}, gulp.series(comprimeImagens));
+    gulp.watch('./source/images/*', {ignoreInitial: false}, gulp.series(comprimeImagens));
 }
 
